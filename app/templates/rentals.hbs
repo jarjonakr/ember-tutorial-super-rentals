@@ -1,0 +1,27 @@
+<div class="jumbo">
+	<div class="right tomster"></div>
+	<h2>Welcome!</h2>
+	<p>We hope you find exactly what you're looking for in a place to stay.</p>
+
+
+		{{#link-to "about" class="button"}}
+	About Us
+	{{/link-to}}
+	</div>
+
+	{{!-- each allows us through loop through each object in model, naming it each
+	one rental, and use its key to get the value --}}
+	{{#each this.model as |rentalUnit|}}
+
+	<RentalListing @rental={{rentalUnit}}/>
+
+
+
+	{{/each}}
+
+
+
+
+
+
+
